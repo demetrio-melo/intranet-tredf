@@ -1,0 +1,56 @@
+{
+  "name": "volto-tredf-intranet",
+  "version": "1.0.0-alpha.0",
+  "description": "Intranet utilizando o Plone 6",
+  "main": "src/index.js",
+  "license": "MIT",
+  "keywords": [
+    "volto-addon",
+    "volto",
+    "plone",
+    "react"
+  ],
+  "author": "Demétrio Melo",
+  "homepage": "https://github.com/demetrio-melo/intranet-tredf#readme",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:demetrio-melo/intranet-tredf"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "i18n": "rm -rf build/messages && NODE_ENV=production i18n --addon",
+    "dry-release": "release-it --dry-run",
+    "release": "release-it",
+    "release-major-alpha": "release-it major --preRelease=alpha",
+    "release-alpha": "release-it --preRelease=alpha"
+  },
+  "addons": [
+    "@eeacms/volto-accordion-block",
+    "@kitconcept/volto-button-block",
+    "@kitconcept/volto-heading-block",
+    "@kitconcept/volto-separator-block",
+    "@kitconcept/volto-social-blocks",
+    "@kitconcept/volto-carousel-block",
+    "@mbarde/volto-image-crop-widget",
+    "@kitconcept/volto-slider-block",
+    "@plonegovbr/volto-code-block",
+    "@kitconcept/volto-light-theme"
+  ],
+  "dependencies": {
+    "@plone/components": "workspace:*",
+    "@kitconcept/volto-light-theme": "7.0.0-alpha.21",
+    "@kitconcept/volto-social-blocks": "1.0.0-alpha.8",
+    "@plonegovbr/volto-code-block": "2.3.0",
+    "@mbarde/volto-image-crop-widget": "0.5.1"
+  },
+  "peerDependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@plone/scripts": "^3.6.1",
+    "release-it": "^17.1.1"
+  }
+}

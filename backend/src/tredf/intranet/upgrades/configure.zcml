@@ -1,0 +1,17 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    >
+
+  <genericsetup:upgradeSteps
+      profile="tredf.intranet:default"
+      source="1000"
+      destination="20250813001"
+      >
+    <genericsetup:upgradeDepends
+        title="Altera timezone para America/Sao_Paulo"
+        import_steps="plone.app.registry"
+        />
+  </genericsetup:upgradeSteps>
+
+</configure>
