@@ -14,4 +14,19 @@
         />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+      profile="tredf.intranet:default"
+      source="20250813001"
+      destination="20250814001"
+      >
+    <genericsetup:upgradeDepends
+        title="Fecha a intranet"
+        import_steps="workflow"
+        />
+    <upgradeStep
+        title="Atualiza o permissionamento com o novo workflow"
+        handler=".workflow.atualiza_permissoes"
+        />
+  </genericsetup:upgradeSteps>
+
 </configure>
