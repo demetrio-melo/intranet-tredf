@@ -4,6 +4,6 @@
            prefix="plone"
            purge="false"
   >
-    <value key="site_title">Intranet TRE-DF</value>
+    <value key="site_title">Intranet do TRE-DF</value>
   </records>
 </registry>
