@@ -10,6 +10,7 @@
       description="Package to configure a new Intranet TRE-DF site"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       directory="profiles/default"
+      post_handler=".setuphandlers.fecha_intranet"
       />
 
   <genericsetup:registerProfile
