@@ -1,3 +1,5 @@
+import AreaView from './components/Views/AreaView';
+
 const applyConfig = (config) => {
   config.settings.isMultilingual = false;
   config.settings.supportedLanguages = ['pt-br'];
@@ -16,7 +18,11 @@ const applyConfig = (config) => {
       ratio: 1,
     },
   ];
-
+  // Registra Visoes padrao para tipos de conteúdo
+  config.views.contentTypesViews = {
+    Area: AreaView,
+    ...config.views.contentTypesViews,
+  };
   return config;
 };
 
