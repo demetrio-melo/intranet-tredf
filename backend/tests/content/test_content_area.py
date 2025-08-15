@@ -1,3 +1,4 @@
+from AccessControl import Unauthorized
 from plone import api
 from plone.dexterity.fti import DexterityFTI
 from tredf.intranet.content.area import Area
@@ -53,8 +54,23 @@ class TestArea:
     def test_has_behavior(self, get_behaviors, behavior):
         assert behavior in get_behaviors(CONTENT_TYPE)
 
-    def test_create(self, area_payload):
-        with api.env.adopt_roles(["Manager"]):
-            content = api.content.create(container=self.portal, **area_payload)
-        assert content.portal_type == CONTENT_TYPE
-        assert isinstance(content, Area)
+    @pytest.mark.parametrize(
+        "role,allowed",
+        [
+            ["Manager", True],
+            ["Site Administrator", True],
+            ["Editor", False],
+            ["Reviewer", False],
+            ["Contributor", False],
+            ["Reader", False],
+        ],
+    )
+    def test_create(self, area_payload, role: str, allowed: bool):
+        with api.env.adopt_roles([role]):
+            if allowed:
+                content = api.content.create(container=self.portal, **area_payload)
+                assert content.portal_type == CONTENT_TYPE
+                assert isinstance(content, Area)
+            else:
+                with pytest.raises(Unauthorized):
+                    api.content.create(container=self.portal, **area_payload)
