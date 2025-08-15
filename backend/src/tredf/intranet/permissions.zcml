@@ -1,9 +1,16 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
-    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="tredf.intranet"
     >
 
-  <!-- -*- extra stuff goes here -*- -->
+  <configure zcml:condition="installed AccessControl.security">
+
+    <permission
+        id="tredf.intranet.area.add"
+        title="tredf.intranet: Add Area"
+        />
+
+  </configure>
 
 </configure>

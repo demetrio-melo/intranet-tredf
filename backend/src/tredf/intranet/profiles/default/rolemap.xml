@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rolemap>
   <permissions>
-    <!-- -*- extra stuff goes here -*- -->
+    <permission acquire="False"
+                name="tredf.intranet: Add Area"
+    >
+      <role name="Manager" />
+      <role name="Site Administrator" />
+    </permission>
   </permissions>
 </rolemap>

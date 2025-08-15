@@ -29,4 +29,18 @@
         />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+      profile="tredf.intranet:default"
+      source="20250814001"
+      destination="20250814002"
+      >
+    <genericsetup:upgradeDepends
+        title="Adiciona o tipo Área"
+        import_steps="typeinfo"
+        />
+    <genericsetup:upgradeDepends
+        title="Aplica permissionamento para tipo de conteúdo Área"
+        import_steps="rolemap"
+        />
+  </genericsetup:upgradeSteps>
 </configure>
