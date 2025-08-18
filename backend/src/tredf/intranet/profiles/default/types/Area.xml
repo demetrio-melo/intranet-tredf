@@ -34,6 +34,8 @@
     <element value="plone.namefromtitle" />
     <element value="plone.shortname" />
     <element value="plone.excludefromnavigation" />
+    <element value="tredf.intranet.behavior.contato" />
+    <element value="tredf.intranet.behavior.endereco" />
     <element value="volto.blocks" />
     <element value="volto.preview_image" />
     <element value="plone.constraintypes" />

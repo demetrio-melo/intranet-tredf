@@ -43,4 +43,16 @@
         import_steps="rolemap"
         />
   </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+      profile="tredf.intranet:default"
+      source="20250814002"
+      destination="20250818001"
+      >
+    <genericsetup:upgradeDepends
+        title="Adiciona behaviors ao tipo Área"
+        import_steps="typeinfo"
+        />
+  </genericsetup:upgradeSteps>
+
 </configure>
