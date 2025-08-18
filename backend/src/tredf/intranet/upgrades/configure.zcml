@@ -29,6 +29,7 @@
         />
   </genericsetup:upgradeSteps>
 
+
   <genericsetup:upgradeSteps
       profile="tredf.intranet:default"
       source="20250814001"
@@ -52,6 +53,21 @@
     <genericsetup:upgradeDepends
         title="Adiciona behaviors ao tipo Área"
         import_steps="typeinfo"
+        />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+      profile="tredf.intranet:default"
+      source="20250818001"
+      destination="20250818002"
+      >
+    <genericsetup:upgradeDepends
+        title="Adiciona tipo Pessoa"
+        import_steps="typeinfo"
+        />
+    <genericsetup:upgradeDepends
+        title="Aplica permissionamento para tipo de conteúdo Pessoa"
+        import_steps="rolemap"
         />
   </genericsetup:upgradeSteps>
 

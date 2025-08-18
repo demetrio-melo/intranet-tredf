@@ -1,4 +1,5 @@
 import AreaView from './components/Views/AreaView';
+import PessoaView from './components/Views/PessoaView';
 
 const applyConfig = (config) => {
   config.settings.isMultilingual = false;
@@ -21,6 +22,7 @@ const applyConfig = (config) => {
   // Registra Visoes padrao para tipos de conteúdo
   config.views.contentTypesViews = {
     Area: AreaView,
+    Pessoa: PessoaView,
     ...config.views.contentTypesViews,
   };
   return config;

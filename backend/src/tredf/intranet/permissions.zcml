@@ -11,6 +11,11 @@
         title="tredf.intranet: Add Area"
         />
 
+    <permission
+        id="tredf.intranet.pessoa.add"
+        title="tredf.intranet: Add Pessoa"
+        />
+
   </configure>
 
 </configure>

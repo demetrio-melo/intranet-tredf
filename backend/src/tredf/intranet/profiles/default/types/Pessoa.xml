@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+        meta_type="Dexterity FTI"
+        name="Pessoa"
+        i18n:domain="tredf.intranet"
+>
+
+  <!-- Basic properties -->
+  <property name="title"
+            i18n:translate=""
+  >Pessoa</property>
+  <property name="description"
+            i18n:translate=""
+  >Uma pessoa colaboradora do TRE-DF</property>
+
+  <property name="allow_discussion">False</property>
+  <property name="factory">Pessoa</property>
+
+  <!-- Hierarchy control -->
+  <property name="filter_content_types">False</property>
+  <property name="allowed_content_types" />
+  <property name="global_allow">True</property>
+
+  <!-- Schema, class and security -->
+  <property name="add_permission">tredf.intranet.pessoa.add</property>
+  <property name="klass">tredf.intranet.content.pessoa.Pessoa</property>
+  <property name="schema">tredf.intranet.content.pessoa.IPessoa</property>
+
+  <!-- Enabled behaviors -->
+  <property name="behaviors"
+            purge="false"
+  >
+    <element value="plone.basic" />
+    <element value="plone.namefromtitle" />
+    <element value="plone.shortname" />
+    <element value="plone.excludefromnavigation" />
+    <element value="tredf.intranet.behavior.contato" />
+    <element value="tredf.intranet.behavior.endereco" />
+    <element value="plone.leadimage" />
+    <element value="plone.constraintypes" />
+    <element value="plone.versioning" />
+  </property>
+
+</object>
