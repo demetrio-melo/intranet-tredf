@@ -1,0 +1,20 @@
+:root {
+  --link-color: rgb(100, 100, 100);
+  --link-color-hover: rgb(0, 131, 190);
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: solid;
+
+  &:hover {
+    color: var(--link-color-hover);
+    text-decoration: solid;
+  }
+}
+
+.contato {
+  padding: $spacing-small;
+  border: 2px solid;
+  border-radius: 5px;
+}
