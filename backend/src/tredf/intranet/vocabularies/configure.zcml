@@ -3,4 +3,8 @@
       name="tredf.intranet.vocabulary.estados"
       component=".estados.vocab_estados"
       />
+  <utility
+      name="tredf.intranet.vocabulary.cargos"
+      component=".cargos.vocab_cargos"
+      />
 </configure>
