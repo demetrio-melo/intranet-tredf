@@ -44,28 +44,29 @@ class IArea(model.Schema):
     )
     endereco = schema.TextLine(
         title=_("Endereço"),
-        description=_("Informe o endereço"),
         required=False,
+        default="",
     )
     complemento = schema.TextLine(
         title=_("Complemento"),
-        description=_("Informe o complemento do endereço"),
+        description=_("Ex. Anexo, Sala"),
         required=False,
+        default="",
     )
     cidade = schema.TextLine(
         title=_("Cidade"),
-        description=_("Informe a cidade"),
         required=False,
+        default="",
     )
-    estado = schema.TextLine(
+    estado = schema.Choice(
         title=_("Estado"),
-        description=_("Informe o estado"),
+        vocabulary="tredf.intranet.vocabulary.estados",
         required=False,
     )
     cep = schema.TextLine(
         title=_("CEP"),
-        description=_("Informe o CEP"),
         required=False,
+        default="",
     )
 
 

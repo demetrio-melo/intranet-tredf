@@ -1,5 +1,6 @@
 <configure xmlns="http://namespaces.zope.org/zope">
-
-  <!-- -*- extra stuff goes here -*- -->
-
+  <utility
+      name="tredf.intranet.vocabulary.estados"
+      component=".estados.vocab_estados"
+      />
 </configure>
