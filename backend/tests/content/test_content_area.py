@@ -19,7 +19,12 @@ def area_payload() -> dict:
         "title": "Tecnologia da Informação",
         "description": ("Área responsável por TI"),
         "email": "ti@tre-df.jus.br",
-        "telefone": "(61) 3210.1234",
+        "telefone": "6132101234",
+        "endereco": "Praça Municipal Qd. 02, Lote 06",
+        "complemento": "",
+        "cidade": "Brasília",
+        "estado": "DF",
+        "cep": "70094-901",
     }
 
 
