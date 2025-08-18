@@ -21,3 +21,15 @@ class TestVocabEstados:
     )
     def test_token(self, token):
         assert token in list(self.vocab.by_token)
+
+    @pytest.mark.parametrize(
+        "token,expected",
+        [
+            ("PR", "Paraná"),
+            ("SP", "São Paulo"),
+            ("DF", "Distrito Federal"),
+        ],
+    )
+    def test_term(self, token: str, expected: str):
+        term = self.vocab.getTermByToken(token)
+        assert term.title == expected
